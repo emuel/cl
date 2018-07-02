@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <p>showme</p>
+    <button>click me</button>
+  <div class="output">
+      <ul>
+      
+      </ul>
+    
+    </div>
+    <div id="thelist"></div>
+</body>
+</html>
+<script>
+
+var button = document.querySelector('button');
+    var p = document.querySelector('p');
+var newcities = [];
+button.onclick = function() {
+ var list = document.querySelector('.output ul');
+list.innerHTML = '';
+var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                'GNF576746573fhdg4737dh4;Greenfield',
+                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                'SYB4f65hf75f736463;Stalybridge',
+                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+for (var i = 0; i < stations.length; i++) {
+  var input = stations[i];
+ let prefix = stations[i].slice(0,3);
+    let start = stations[i].indexOf(';');
+    let suffix = stations[i].slice(start + 1);
+  var result = prefix + ": " + suffix;
+  var listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+    newcities.push(result);
+}
+}
+p.onclick = function(){
+    document.getElementById('thelist').innerHTML = newcities;
+    
+}
+</script>

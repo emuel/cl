@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+   
+    </style>
+    <title></title>
+</head>
+
+<body>
+    <button onclick="randy()">click me </button>
+     <input type="text" id="guessField">
+    <p>The Random Number is: </p>
+</body>
+</html>
+<script>
+    var guessField = document.querySelector('#guessField');
+     var appendIt = document.querySelector('p');
+    appendIt.onclick = randy;
+    function randy() {
+var randNum = Math.round(Math.random()*2);
+  var theGuess = Number(guessField.value);
+  if (randNum === theGuess) {
+    appendIt.innerHTML = 'The Winning number is: '+randNum+ ', which is the same as your guess. Congratulations!' ;
+  }
+        else {appendIt.innerHTML = "wa, wa, wa";}
+        guessField.value = '';
+        guessField.focus();
+    }
+  
+</script>

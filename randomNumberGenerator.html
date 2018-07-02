@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <button onclick="randy()">random</button>
+    <label for="guess">put in a number</label>
+    <input id="guess" type="text"><br>
+    <div id="tellme"></div><br>
+   
+    <div id="feedback">feedback here</div>
+    <br>
+    <div id="thenumbers"></div>
+
+</body>
+
+</html>
+<script>
+    let myNum = Math.random() * 100;
+    let whichField = document.querySelector("#guess")
+    myRoundNum = Math.round(myNum);
+ document.getElementById("tellme").innerHTML = myRoundNum;
+    function randy() {
+        let getval = Number(whichField.value);
+        document.getElementById("thenumbers").innerHTML += getval + " ";
+        document.getElementById("tellme").innerHTML = myRoundNum;
+       
+       if (getval === myRoundNum) {
+            document.getElementById("feedback").innerHTML = "perfect"
+        } 
+        if (getval < myRoundNum) {
+            document.getElementById("feedback").innerHTML = "Too low"
+        } 
+         if (getval > myRoundNum) {
+            document.getElementById("feedback").innerHTML = "Too high"
+        } 
+       
+
+    }
+
+</script>

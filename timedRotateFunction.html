@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            background-color: rgb(10, 44, 186);
+            width: 555px;
+            height: 222px;
+            transform: rotate(45deg);
+        }
+        body{background-color: yellow;}
+    </style>
+    <title></title>
+</head>
+
+<body>
+<div id="spinner"></div>
+    <button onclick="spinIt()">spin</button>
+</body>
+<script>
+    var spincontrol = 0;
+    var howtran = .01;
+    var theDiv = document.querySelector('#spinner')
+ setInterval(spinIt, 100);
+    function spinIt(){
+        var howfar = spincontrol+"deg";
+        theDiv.style.transform = "rotate("+howfar+")";
+        spincontrol++;
+        howtran += .04;
+        theDiv.style.opacity = howtran;
+        
+    }
+    </script>
+</html>

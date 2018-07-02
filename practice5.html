@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Apply JavaScript example</title>
+  </head>
+  <body>
+    <button>Click me</button><br><br>
+      <button onclick="createParagraph()">function added</button>
+  </body>
+  <script>function createParagraph() {
+  var para = document.createElement('p');
+  para.textContent = 'You clicked the button!';
+  document.body.appendChild(para);
+}
+
+//var buttons = document.querySelector('button');
+
+
+ // buttons.addEventListener('click', createParagraph);
+
+</script>
+</html>
+

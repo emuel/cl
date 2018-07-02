@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Function library example</title>
+  <style>
+    div {width: 200px;
+        height: 200px;
+        float: left;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        background-color: #efcfcf;
+    </style>
+
+</head>
+<body>
+<p id="tellme"></p>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  <script>
+var pp = document.querySelector('#tellme');
+var btn = document.querySelector('button');
+function random(number) {
+  return Math.floor(Math.random()*(number+1));
+}
+
+
+function bgChange() {
+  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+return rndCol;
+}   
+
+      
+      
+var divs = document.querySelectorAll('div');
+
+for (var i = 0; i < divs.length; i++) {
+  divs[i].onclick = function(e) {
+    e.target.style.backgroundColor = bgChange();
+      pp.innerHTML+= bgChange()+' ';
+  }
+}      
+  </script>
+</body>
+</html>

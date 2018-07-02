@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <button id="one" onclick="whichButton('button1')">one</button>
+    <button id="two" onclick="whichButton('button2')">two </button>
+    <div id="changeme">
+
+    </div>
+
+</body>
+<script>
+    var whichButt = "";
+    var butt1 = document.querySelector('#one');
+    var butt2 = document.querySelector('#two');
+    //     var changeme = document.querySelector('#changeme'); 
+    ////    butt1.addEventListener('click',buttbutt);
+    //    butt1.addEventListener('click',function() {whichButton);
+    //  butt2.addEventListener('click',whichButton);
+    //  function buttbutt(){
+    //      whichButt = "button1";
+    //  }
+    //        
+    function whichButton(whichone) {
+        whichButt = whichone;
+        (whichButt === "button1") ? changeme.textContent = "you clicked button 1": changeme.textContent = "another button";
+
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Function library example</title>
+  
+</head>
+<body>
+<button id='b1'>click me</button><br>
+<button id="rebut">remove function</button>
+  <div id="tellme"></div><br>
+    <div id="tellmeagain"></div>
+  <script>
+ var btn = document.querySelector('#b1');
+var remove = document.querySelector('#rebut');
+var teller = document.querySelector('#tellme');
+
+var teller2= document.querySelector('#tellmeagain');
+btn.addEventListener('click', functionA);
+btn.addEventListener('click', functionB);
+remove.onclick = function(){
+    btn.removeEventListener('click', functionB); 
+}
+      
+function functionA(){
+teller.innerHTML = "from functionA";
+}
+function functionB() {
+ teller2.innerHTML = "from function B";   
+}
+  </script>
+</body>
+</html>

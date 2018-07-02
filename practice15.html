@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Function library example</title>
+  
+</head>
+<body>
+<button>click me</button>
+  <div id="tellme"></div>
+  <script>
+ var btn = document.querySelector('button');
+var teller = document.querySelector('#tellme');
+function random(number) {
+  return Math.floor(Math.random()*(number+1));
+}
+window.onresize = function() {
+  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  document.body.style.backgroundColor = rndCol;
+    teller.innerHTML = random(255);
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+btn.onclick = function() {
+  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  document.body.style.backgroundColor = rndCol;
+    teller.innerHTML = random(255);
+}
+  </script>
+</body>
+</html>
